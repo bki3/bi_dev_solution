@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yves Irie | Contact</title>
+  <meta name="description" content="Contact page with a form, phone input, radio buttons, and hobby checkboxes.">
+  <meta name="keywords" content="contact, form, phone number, hobbies, NJIT, HTML, CSS">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="brand">
+        <h1>MySite</h1>
+        <p>Contact • Send a message</p>
+      </div>
+
+      <nav>
+        <a class="nav-btn" href="index.html">Home</a>
+        <a class="nav-btn" href="services.html">Services</a>
+        <a class="nav-btn" href="contact.html">Contact</a>
+      </nav>
+      <hr>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="card">
+      <h2>Contact Me</h2>
+      <p>
+        Use the form below to send a message. Fields marked required must be completed.
+      </p>
+
+      <ul>
+        <li>Email: <a href="mailto:your_email@email.com">your_email@email.com</a></li>
+        <li>School: <a href="https://www.njit.edu/" target="_blank" rel="noopener">NJIT Website</a></li>
+      </ul>
+
+      <form action="#" method="post">
+        <label for="name">Your Name (required)</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email (required)</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Requirement: text box for phone number -->
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+
+        <label for="message">Message (required)</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <!-- Requirement: radio button yes/no question -->
+        <fieldset>
+          <legend>Would you like a reply by phone?</legend>
+          <div class="inline">
+            <label><input type="radio" name="reply_by_phone" value="yes" required> Yes</label>
+            <label><input type="radio" name="reply_by_phone" value="no"> No</label>
+          </div>
+        </fieldset>
+
+        <!-- Requirement: checkboxes for hobbies -->
+        <fieldset>
+          <legend>Select your hobbies</legend>
+          <div class="inline">
+            <label><input type="checkbox" name="hobbies" value="coding"> Coding</label>
+            <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+            <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+            <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <img src="images/contact-banner.jpg" alt="Contact banner image">
+    </section>
+  </main>
+
+  <footer class="wrapper">
+    <p>Back to <a href="index.html">Home</a></p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
