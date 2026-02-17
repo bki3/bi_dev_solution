@@ -1,64 +1,254 @@
 <!DOCTYPE html>
+<!-- DEVELOPER: Yves Irie, IS218 Web Systems Development Lab 1 -->
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yves Irie | Services</title>
-  <meta name="description" content="Services page listing web and data services offered in this HTML Lab 1 website.">
-  <meta name="keywords" content="services, web development, data analytics, dashboards, NJIT, HTML, CSS">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <title>Services - Yves Irie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 
-<body>
-  <header>
-    <div class="wrapper">
-      <div class="brand">
-        <h1>MySite</h1>
-        <p>Services • What I can help with</p>
-      </div>
+<body class="service-page">
 
-      <nav>
-        <a class="nav-btn" href="index.html">Home</a>
-        <a class="nav-btn" href="services.html">Services</a>
-        <a class="nav-btn" href="contact.html">Contact</a>
-      </nav>
-      <hr>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Yves Irie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section vh-100 d-flex align-items-center">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 mb-4 fw-bold text-white">My Services</h1>
+                    <p class="lead text-white mb-4">Web development skills and capabilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What I Can Do</h2>
+            <div class="row g-4">
+                
+                <!-- Service 1: Website Development -->
+                <div class="col-md-6">
+                    <div class="card h-100 service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-globe text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Website Development</h3>
+                            <p class="card-text">Create professional, responsive websites using modern HTML5 and CSS3 standards.</p>
+                            
+                            <h5 class="mt-4 mb-3">Skills Include:</h5>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Semantic HTML5 markup</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Responsive CSS layouts</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Bootstrap framework</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Mobile-first design</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Cross-browser compatibility</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Clean, maintainable code</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: UI/UX Design -->
+                <div class="col-md-6">
+                    <div class="card h-100 service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-palette text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h3 class="card-title mb-3">UI/UX Design</h3>
+                            <p class="card-text">Design user-friendly interfaces with focus on user experience and accessibility.</p>
+                            
+                            <h5 class="mt-4 mb-3">Skills Include:</h5>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> User interface design</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Color theory & typography</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Responsive layouts</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Accessibility standards</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Modern design patterns</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Interactive elements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Front-End Development -->
+                <div class="col-md-6">
+                    <div class="card h-100 service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-code-slash text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Front-End Development</h3>
+                            <p class="card-text">Build interactive web applications with JavaScript and modern frameworks.</p>
+                            
+                            <h5 class="mt-4 mb-3">Skills Include:</h5>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> JavaScript ES6+</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> DOM manipulation</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Event handling</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> AJAX & fetch API</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Form validation</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Browser DevTools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Web Performance -->
+                <div class="col-md-6">
+                    <div class="card h-100 service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-speedometer2 text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Performance Optimization</h3>
+                            <p class="card-text">Optimize websites for speed, SEO, and best practices using modern techniques.</p>
+                            
+                            <h5 class="mt-4 mb-3">Skills Include:</h5>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Image optimization</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Code minification</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> SEO best practices</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Loading speed optimization</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Lazy loading</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Web standards compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Technologies & Tools</h2>
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <i class="fa fa-html5" style="font-size: 4rem; color: #e34f26;"></i>
+                    <p class="mt-2 fw-bold">HTML5</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <i class="fa fa-css3" style="font-size: 4rem; color: #1572b6;"></i>
+                    <p class="mt-2 fw-bold">CSS3</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <i class="bi bi-bootstrap-fill" style="font-size: 4rem; color: #7952b3;"></i>
+                    <p class="mt-2 fw-bold">Bootstrap</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <i class="bi bi-git" style="font-size: 4rem; color: #f05032;"></i>
+                    <p class="mt-2 fw-bold">Git/GitHub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Me?</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="bi bi-award text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="mt-3">Quality Code</h5>
+                        <p>Clean, semantic, and well-documented code</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="bi bi-phone text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="mt-3">Responsive</h5>
+                        <p>Works perfectly on all devices</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="bi bi-lightning-charge text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="mt-3">Fast Loading</h5>
+                        <p>Optimized for speed and performance</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="bi bi-shield-check text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="mt-3">Best Practices</h5>
+                        <p>Following web standards and accessibility</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div id="call-to-action" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3 class="mb-4">Interested in Working Together?</h3>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Contact Me</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main class="wrapper">
-    <section class="card">
-      <h2>My Services</h2>
-      <p>Here are a few things I enjoy building and learning:</p>
+    <!-- Footer -->
+    <footer class="footer gray-bg">
+        <div class="footer-area">
+            <div class="container">
+                <div class="footer-info text-center py-4">
+                    <div class="social-icon mb-3">
+                        <a href="https://github.com/bki3" target="_blank"><i class="fa fa-github"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <p class="mb-2"><strong>Yves Irie</strong></p>
+                    <p class="mb-0">IS218 Web Systems Development - HTML Lab 1</p>
+                    <p class="mb-0">&copy; 2024 Yves Irie. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-      <ol>
-        <li><strong>Web Pages</strong> — HTML/CSS layouts, responsive design, basic interactivity</li>
-        <li><strong>Data & BI</strong> — cleaning data, SQL queries, dashboards</li>
-        <li><strong>Documentation</strong> — clear writeups, checklists, and project notes</li>
-      </ol>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-      <p>
-        Want to learn HTML tags quickly? Here’s a helpful resource:
-        <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools HTML</a>
-      </p>
-
-      <img src="images/service-web.jpg" alt="Service image for web development">
-    </section>
-
-    <section class="card">
-      <h3>Data Projects</h3>
-      <p>
-        I like turning messy information into something useful. Example outputs include
-        <em>tables</em>, <strong>charts</strong>, and clear summaries.
-      </p>
-      <img src="images/service-data.jpg" alt="Service image for data analytics">
-    </section>
-  </main>
-
-  <footer class="wrapper">
-    <p>Questions? Visit the <a href="contact.html">contact page</a>.</p>
-  </footer>
-
-  <script src="scripts/script.js"></script>
 </body>
+
 </html>
