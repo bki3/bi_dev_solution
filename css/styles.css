@@ -12,7 +12,21 @@
 ===================================================================================*/
 /* Custom Styles */
 .navbar-brand {
-  font-weight: 700; /* bold */
+  font-size: 1.5rem;   /* bigger logo text */
+  font-weight: 800;    /* bolder logo */
+  letter-spacing: 0.3px;
+}
+/* Navbar sizing (menu + padding) */
+.navbar {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;   /* bigger menu text */
+  font-weight: 600;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .hero-section {
