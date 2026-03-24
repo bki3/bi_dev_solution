@@ -1,6 +1,185 @@
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-home.jpg');
-  /* Other styles */
+/*=================================================================================
+ 
+    Theme Name: BI Dev Solution
+    Theme URI: https://github.com/bki3/bi_dev_solution
+    Description: Business Formation, Software Development & Data Intelligence website
+    Author: BI Dev Solution
+    Author URI: https://github.com/bki3
+    Version: 1.0
+ 
+===================================================================================*/
+
+/* ==========================================================================
+   Design tokens (easy to edit)
+   ========================================================================== */
+:root {
+  --brand-primary: #0d6efd;
+
+  --text-dark: #212529;
+  --bg-light: #f8f9fa;
+
+  --border-light: #e9ecef;
+
+  --hero-overlay: rgba(0, 0, 0, 0.55);
+  --hover-bg: rgba(13, 110, 253, 0.08);
+
+  --radius-pill: 0.5rem;
 }
 
-/* Other CSS rules */
+/* ==========================================================================
+   Navbar (logo + menu)
+   ========================================================================== */
+.navbar {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+/* Space between menu items (Bootstrap 5: ul is flex via .navbar-nav) */
+.navbar-nav {
+  gap: 0.75rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Active/current page link (NO background) */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
+  color: var(--brand-primary) !important;
+  background: transparent !important;
+  font-weight: 700;
+}
+
+/* Hover (light background) */
+.navbar-nav .nav-link:hover {
+  color: var(--brand-primary);
+  background: var(--hover-bg);
+}
+
+/* ==========================================================================
+   Hero backgrounds (keep same “before” behavior: center/cover/no-repeat)
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("../images/hero-home.jpg") center/cover no-repeat;
+}
+
+.service-page .hero-section {
+  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("../images/service-web.jpg") center/cover no-repeat;
+}
+
+.contact-page .hero-section {
+  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("../images/contact-banner.jpg") center/cover no-repeat;
+}
+
+.about-page .hero-section {
+  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("../images/service-data.jpg") center/cover no-repeat;
+}
+
+/* ==========================================================================
+   Hero typography (optional: use in index.html for the “agency” look)
+   --------------------------------------------------------------------------
+   Add classes in HTML:
+   - <p class="hero-kicker ...">...</p>
+   - <h1 class="hero-title ...">...</h1>
+   - <p class="hero-subhead ...">...</p>
+   - <p class="hero-location ...">...</p>
+   ========================================================================== */
+.hero-copy {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.hero-kicker {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.hero-title {
+  font-weight: 800;
+  line-height: 1.05;
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+}
+
+.hero-subhead {
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
+
+.hero-location {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer.gray-bg {
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-light);
+}
+
+.social-icon a {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icon a:hover {
+  color: var(--brand-primary);
+}
+
+/* ==========================================================================
+   Cards / images
+   ========================================================================== */
+.service-card img.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+.service-features {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-features li {
+  margin-bottom: 10px;
+}
+
+.service-features i {
+  margin-right: 10px;
+}
+
+/* ==========================================================================
+   CTA
+   ========================================================================== */
+#call-to-action {
+  border-top: 1px solid var(--border-light);
+}
+
+/* ==========================================================================
+   Small helpers
+   ========================================================================== */
+code {
+  background: #f1f3f5;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+}
