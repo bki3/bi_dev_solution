@@ -1,4 +1,8 @@
 /* Custom Styles */
+.navbar-brand {
+  font-weight: 700; /* bold */
+}
+
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
         url('../images/hero-home.jpg') center/cover no-repeat;
