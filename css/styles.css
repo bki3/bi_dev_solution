@@ -263,21 +263,21 @@
 /* ==========================================================================
    CTA
    ========================================================================== */
-/* Contact CTA (image4 style) */
+/* Contact CTA (smaller + blue button) */
 .contact-cta {
   position: relative;
-  padding: 6rem 0;
+  padding: 3.5rem 0; /* smaller */
   color: #fff;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
     url("../images/contact-banner.jpg") center/cover no-repeat;
-  border-top: 10px solid #ff6b5f;
+  border-top: 8px solid rgba(13, 110, 253, 0.65); /* blue strip */
   overflow: hidden;
 }
 
 .contact-cta-inner {
   position: relative;
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -287,41 +287,48 @@
   inset: 0;
   display: grid;
   place-items: center;
-  font-size: clamp(6rem, 18vw, 16rem);
+  font-size: clamp(4.5rem, 14vw, 11rem); /* smaller */
   font-weight: 900;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.06); /* subtler */
   z-index: 0;
   pointer-events: none;
   user-select: none;
 }
 
 .contact-cta-kicker {
-  font-size: 1.8rem;
-  font-weight: 300;
+  font-size: 1.2rem; /* smaller */
+  font-weight: 400;
   opacity: 0.9;
 }
 
 .contact-cta-title {
-  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  font-size: clamp(1.8rem, 3.8vw, 3.2rem); /* smaller */
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 .contact-cta-btn {
   display: inline-block;
-  padding: 0.95rem 2.25rem;
+  padding: 0.75rem 1.5rem; /* smaller */
   border-radius: 999px;
-  background: #ff6b5f;
+  background: var(--brand-primary); /* original blue */
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  border: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
 }
 
 .contact-cta-btn:hover {
-  background: #ff5a4d;
+  background: #0b5ed7; /* Bootstrap primary hover */
   color: #fff;
+}
+
+@media (max-width: 576px) {
+  .contact-cta {
+    padding: 2.75rem 0;
+  }
 }
 
 /* ==========================================================================
