@@ -26,6 +26,15 @@ p.justify {
   text-align: justify;
   text-justify: inter-word;
 }
+/* Medium global text spacing */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
 
 /* Text spacing utilities */
 .text-gap-sm { margin-bottom: 0.5rem; }
