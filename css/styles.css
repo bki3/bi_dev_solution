@@ -11,9 +11,17 @@
 
 body {
   font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
 }
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
+}
+/* Justify normal reading text */
+p,
+li {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* ==========================================================================
