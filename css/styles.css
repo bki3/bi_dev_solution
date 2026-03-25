@@ -263,8 +263,65 @@
 /* ==========================================================================
    CTA
    ========================================================================== */
-#call-to-action {
-  border-top: 1px solid var(--border-light);
+/* Contact CTA (image4 style) */
+.contact-cta {
+  position: relative;
+  padding: 6rem 0;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../images/contact-banner.jpg") center/cover no-repeat;
+  border-top: 10px solid #ff6b5f;
+  overflow: hidden;
+}
+
+.contact-cta-inner {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.contact-cta-watermark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(6rem, 18vw, 16rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.contact-cta-kicker {
+  font-size: 1.8rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.contact-cta-title {
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.contact-cta-btn {
+  display: inline-block;
+  padding: 0.95rem 2.25rem;
+  border-radius: 999px;
+  background: #ff6b5f;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.contact-cta-btn:hover {
+  background: #ff5a4d;
+  color: #fff;
 }
 
 /* ==========================================================================
