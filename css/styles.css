@@ -27,6 +27,13 @@ p.justify {
   text-align: justify;
   text-justify: inter-word;
 }
+
+/* Text spacing utilities */
+.text-gap-sm { margin-bottom: 0.5rem; }
+.text-gap-md { margin-bottom: 1rem; }
+.text-gap-lg { margin-bottom: 1.5rem; }
+.text-gap-xl { margin-bottom: 2rem; }
+
 /* ==========================================================================
    Design tokens (easy to edit)
    ========================================================================== */
