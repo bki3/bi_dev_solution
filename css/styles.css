@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-page .hero-section {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-    url("../images/contact-banner.jpg") center/cover no-repeat;
+    url("../images/contact-banner.webp") center/cover no-repeat;
 }
 
 .about-page .hero-section {
