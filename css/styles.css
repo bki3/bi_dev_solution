@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-page .hero-section {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-    url("../images/service-web.jpg") center/cover no-repeat;
+    url("../images/main-service-web.webp") center/cover no-repeat;
 }
 
 .contact-page .hero-section {
