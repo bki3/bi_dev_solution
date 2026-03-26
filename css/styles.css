@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .hero-section {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-    url("../images/hero-home.jpg") center/cover no-repeat;
+    url("../images/hero-home.webp") center/cover no-repeat;
 }
 
 .service-page .hero-section {
