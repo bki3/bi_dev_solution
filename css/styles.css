@@ -41,6 +41,13 @@ h1, h2, h3, h4, h5, h6 {
 .text-gap-lg { margin-bottom: 1.5rem; }
 .text-gap-xl { margin-bottom: 2rem; }
 
+/* Global responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ==========================================================================
    Design tokens (easy to edit)
    ========================================================================== */
