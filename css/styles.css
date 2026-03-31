@@ -275,6 +275,16 @@ h1, h2, h3, h4, h5, h6 {
   height: 200px;
   object-fit: cover;
 }
+/* Service card title highlight */
+.service-card-title {
+  font-weight: 800;
+  background: #ff6b00;          /* catchy orange */
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  display: inline-block;        /* background fits the text */
+  line-height: 1.2;
+}
 
 /* ==========================================================================
    Lists
