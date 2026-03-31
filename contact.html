@@ -79,7 +79,8 @@
                             <hr>
 
                             <!-- FORM: Formspree -->
-                            <form id="contactForm" action="https://formspree.io/f/mreokjkl" method="POST">
+                            <form id="contactForm" action="https://formspree.io/f/mreokjkl" method="POST" novalidate>
+                              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                                 <!-- Name -->
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
@@ -126,7 +127,6 @@
 
                                 <!-- Formspree config -->
                                 <input type="hidden" name="_subject" value="New lead: BI Dev Solution website">
-                                <input type="hidden" name="_replyto" value="%email%">
                                 <!-- Optional: redirect after submit -->
                                 <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html"> -->
 
