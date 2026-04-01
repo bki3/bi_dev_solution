@@ -79,63 +79,70 @@
                             <hr>
 
                             <!-- FORM: Formspree -->
-                            <form id="contactForm" action="https://formspree.io/f/mreokjkl" method="POST" novalidate>
-                              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                                <!-- Name -->
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName" class="form-label">First Name *</label>
-                                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName" class="form-label">Last Name *</label>
-                                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required>
-                                    </div>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email Address *</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="you@company.com" required>
-                                </div>
-
-                                <!-- Phone (optional) -->
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Phone Number (Optional)</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="(000) 000-0000">
-                                </div>
-
-                                <!-- Service interest -->
-                                <div class="mb-3">
-                                    <label for="service" class="form-label">What are you interested in? *</label>
-                                    <select class="form-select" id="service" name="service" required>
-                                        <option value="" selected disabled>Select one</option>
-                                        <option value="Strategic Business Formation">Strategic Business Formation</option>
-                                        <option value="Full-Cycle Development & Modernization">Full-Cycle Development & Modernization</option>
-                                        <option value="Unified Project Data Analysis">Unified Project Data Analysis</option>
-                                        <option value="Not sure yet">Not sure yet</option>
-                                    </select>
-                                </div>
-
-                                <!-- Message -->
-                                <div class="mb-4">
-                                    <label for="message" class="form-label">Message *</label>
-                                    <textarea class="form-control" id="message" name="message" rows="6"
-                                        placeholder="What are you trying to achieve? Include timeline, current tools, and any links if helpful."
-                                        required></textarea>
-                                </div>
-
-                                <!-- Formspree config -->
-                                <input type="hidden" name="_subject" value="New lead: BI Dev Solution website">
-                                <!-- Optional: redirect after submit -->
-                                <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html"> -->
-
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg px-5">
-                                        <i class="bi bi-send me-2"></i>Send Message
-                                    </button>
-                                </div>
-                            </form>
+                           <!-- Success / error message area -->
+                          <div id="formMessage" class="alert mt-4" style="display:none;"></div>
+                          
+                          <form id="contactForm" novalidate>
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                          
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required data-fs-field>
+                                <span class="text-danger small" data-fs-error="firstName"></span>
+                              </div>
+                          
+                              <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" required data-fs-field>
+                                <span class="text-danger small" data-fs-error="lastName"></span>
+                              </div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email Address *</label>
+                              <input type="email" class="form-control" id="email" name="email" required data-fs-field>
+                              <span class="text-danger small" data-fs-error="email"></span>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="phone" class="form-label">Phone Number (Optional)</label>
+                              <input type="tel" class="form-control" id="phone" name="phone" data-fs-field>
+                              <span class="text-danger small" data-fs-error="phone"></span>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="service" class="form-label">What are you interested in? *</label>
+                              <select class="form-select" id="service" name="service" required data-fs-field>
+                                <option value="" selected disabled>Select one</option>
+                                <option value="Strategic Business Formation">Strategic Business Formation</option>
+                                <option value="Full-Cycle Development & Modernization">Full-Cycle Development & Modernization</option>
+                                <option value="Unified Project Data Analysis">Unified Project Data Analysis</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                              </select>
+                              <span class="text-danger small" data-fs-error="service"></span>
+                            </div>
+                          
+                            <div class="mb-4">
+                              <label for="message" class="form-label">Message *</label>
+                              <textarea class="form-control" id="message" name="message" rows="6" required data-fs-field></textarea>
+                              <span class="text-danger small" data-fs-error="message"></span>
+                            </div>
+                          
+                            <input type="hidden" name="_subject" value="New lead: BI Dev Solution website">
+                          
+                            <div class="text-center">
+                              <button type="submit" class="btn btn-primary btn-lg px-5" data-fs-submit-btn>
+                                <i class="bi bi-send me-2"></i>Send Message
+                              </button>
+                            </div>
+                          </form>
+                          
+                          <script>
+                            window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+                            formspree('initForm', { formElement: '#contactForm', formId: 'mreokjkl' });
+                          </script>
+                          <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
                             <div id="formMessage" class="alert mt-4" style="display:none;"></div>
 
